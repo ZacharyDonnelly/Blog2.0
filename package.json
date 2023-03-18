@@ -20,6 +20,7 @@
     "@babel/core": "^7.21.3",
     "@babel/eslint-parser": "^7.21.3",
     "@heroicons/vue": "^2.0.16",
+    "@nuxt/bridge": "^0.10.1",
     "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
     "@nuxt/types": "^2.16.3",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",

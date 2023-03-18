@@ -1,4 +1,5 @@
 import { fileURLToPath } from 'url'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   app: {
@@ -45,7 +46,9 @@ export default defineNuxtConfig({
   static: { prefix: false },
   tailwindcss: { exposeConfig: true },
   router: {
-    // https://router.vuejs.org/api/interfaces/routeroptions.html    // @ts-expect-error - See above link for available options    linkActiveClass: 'active',
+    // https://router.vuejs.org/api/interfaces/routeroptions.html
+    // @ts-expect-error - See above link
+    linkActiveClass: 'active',
     linkExactActiveClass: 'exact-active'
   },
   telemetry: false,
