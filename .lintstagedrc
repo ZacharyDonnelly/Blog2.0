@@ -1,0 +1,4 @@
+{
+  "**/*.{js,json}": ["prettier --write"],
+  "**/*.{vue,ts}": ["prettier --write"]
+}
