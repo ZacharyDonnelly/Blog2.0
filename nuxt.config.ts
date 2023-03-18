@@ -40,6 +40,9 @@ export default defineNuxtConfig({
   buildModules: ['@nuxtjs/tailwindcss', '@nuxt/image-edge'],
   css: ['@/assets/css/main.scss'],
   components: [{ path: '@/components/', pathPrefix: false }],
+  experimental: {
+    payloadExtraction: false
+  },
   modules: [
     '@vite-pwa/nuxt',
     '@nuxtjs/tailwindcss',
@@ -47,9 +50,25 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt'
   ],
+  nitro: {
+    prerender: {
+      routes: ['/']
+    }
+  },
   pwa: {
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    },
     client: {
-      installPrompt: 'vite-pwa:lsCache:hideInstallPrompt'
+      installPrompt: true,
+      // you don't need to include this: only for testing purposes
+      periodicSyncForUpdates: 3600
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module'
     }
   },
   plugins: [],
