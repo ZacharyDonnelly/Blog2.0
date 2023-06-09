@@ -44,7 +44,7 @@
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.5",
     "rollup-plugin-visualizer": "^5.9.0",
-    "sass": "^1.59.3",
+    "sass": "^1.63.2",
     "sass-loader": "^13.2.0",
     "ts-jest": "^29.0.5",
     "vue-eslint-parser": "^9.1.0",
